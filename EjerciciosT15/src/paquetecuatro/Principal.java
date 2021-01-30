@@ -18,5 +18,5 @@ public class Principal {
         // 
         LecturaArchivo.leerRegistros();
     }
-    
+
 }

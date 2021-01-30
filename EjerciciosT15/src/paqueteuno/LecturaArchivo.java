@@ -16,7 +16,7 @@ import java.util.Scanner;
  * @author reroes
  */
 public class LecturaArchivo {
-   
+
     // lee registro del archivo
     public static void leerRegistros() {
 
@@ -24,7 +24,7 @@ public class LecturaArchivo {
         try // lee registros del archivo, usando el objeto Scanner
         {
             Scanner entrada = new Scanner(new File("data/datos1.csv"));
-
+            int datos = 0;
             while (entrada.hasNext()) {
                 String linea = entrada.nextLine();
                 List<String> lista = Arrays.asList(linea.split(","));
@@ -32,6 +32,9 @@ public class LecturaArchivo {
                 for (int i = 0; i < linea_partes.size(); i++) {
                     System.out.println(linea_partes.get(i));
                 }
+                System.out.printf("%s\n", lista.get(1));
+
+                System.out.println(datos);
                 System.out.println("-----------------------------------");
 
             } // fin de while
@@ -39,10 +42,9 @@ public class LecturaArchivo {
         } // fin de try
         catch (Exception e) {
             System.err.println("Error al leer del archivo.");
-            System.exit(1); 
+            System.exit(1);
         } // fin de catch
     } // fin del m�todo leerRegistros
     // cierra el archivo y termina la aplicaci�n
 
-    
 } // fin de la clase LeerArchivoTexto

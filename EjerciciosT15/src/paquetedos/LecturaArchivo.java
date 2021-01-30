@@ -16,7 +16,7 @@ import java.util.Scanner;
  * @author reroes
  */
 public class LecturaArchivo {
-   
+
     // lee registro del archivo
     public static void leerRegistros() {
 
@@ -35,9 +35,9 @@ public class LecturaArchivo {
                 // recuerde en el ArrayList existe elementos de tipo 
                 // String
                 numeroEstablecimientos = linea_partes.get(1); // obtengo el
-                                                              // dato que se 
-                                                              // necesita
-                                                              // por cada línea
+                // dato que se 
+                // necesita
+                // por cada línea
                 // A la variable numeroEstablecimiento que es de tipo
                 // String la pasamos a tipo Entero; para poder hacer
                 // acumluación
@@ -45,19 +45,19 @@ public class LecturaArchivo {
                 // para transformar un valor de tipo String a Entero
                 numeroEstablecimientosEntero = Integer.parseInt(numeroEstablecimientos);
                 // agregar código aquí
-                
-                
+                System.out.printf("%d\n", numeroEstablecimientosEntero);
+                suma += numeroEstablecimientosEntero;
+
             } // fin de while
             entrada.close();
         } // fin de try
         catch (Exception e) {
             System.err.printf("Error, revise: %s\n", e);
-            System.exit(1); 
+            System.exit(1);
         } // fin de catch
-        
+
         System.out.printf("El número de establecimiento es: %d\n", suma);
     } // fin del m�todo leerRegistros
     // cierra el archivo y termina la aplicaci�n
 
-    
-} 
+}

@@ -19,5 +19,5 @@ public class Principal {
         double sueldos = LecturaArchivo.leerRegistros();
         System.out.printf("Promedio de sueldos %.2f\n", sueldos);
     }
-    
+
 }
